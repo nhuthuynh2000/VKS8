@@ -65,11 +65,8 @@
                 </div>
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
-                        // Lắng nghe sự kiện click của nút tìm kiếm
                         document.getElementById('searchButton').addEventListener('click', function () {
-                            // Lấy giá trị nhập liệu từ ô tìm kiếm
                             var searchTerm = document.getElementById('searchInput').value;
-                            // Xử lý tìm kiếm (ví dụ: chuyển hướng người dùng đến trang kết quả tìm kiếm)
                             window.location.href = "search_results_page.html?query=" + encodeURIComponent(searchTerm);
                         });
                     });
@@ -153,16 +150,9 @@
             </div>
         </div>
         <script>
-            // When the user scrolls the page, execute myFunction
             window.onscroll = function () { myFunction() };
-
-            // Get the header
             var header = document.getElementById("menu");
-
-            // Get the offset position of the navbar
             var sticky = header.offsetTop;
-
-            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
             function myFunction() {
                 if (window.pageYOffset > sticky) {
                     header.classList.add("sticky");

@@ -81,11 +81,9 @@
 <body>
 
     <div class="box1">
-        <!-- Slideshow container -->
         <div class="slideshow">
             <div class="slideshow-container">
 
-                <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
                     <img src="Hinh/hinh1.jpg" style="width: 700px;height: 420px">
                     <div class="text">Đồng chí Võ Quang Huy trao Quyết định bổ nhiệm đồng chí Lê Thị Đông giữ chức
@@ -108,7 +106,6 @@
 
 
 
-            <!-- The dots/circles -->
             <div class="slideshow-dot">
                 <span class="dot active" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -162,12 +159,10 @@
         let slideIndex = 1;
         showSlides(slideIndex);
 
-        // Next/previous controls
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
@@ -189,16 +184,12 @@
         }
     </script>
     <script>
-        // When the user scrolls the page, execute myFunction
         window.onscroll = function () { myFunction() };
 
-        // Get the header
         var header = document.getElementById("menu");
 
-        // Get the offset position of the navbar
         var sticky = header.offsetTop;
 
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function myFunction() {
             if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");
